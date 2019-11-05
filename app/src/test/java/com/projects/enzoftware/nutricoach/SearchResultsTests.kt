@@ -39,7 +39,17 @@ class SearchResultsTests {
     @Test
     fun search_withRepositoryHavingRecipes_callsShowRecipes() {
 
-        val recipe = Recipe("id", "title", "imageUrl", "sourceUrl", false)
+        val recipe = Recipe(
+            "id",
+            "title",
+            "imageUrl",
+            "f2fUrl",
+            "publisher",
+            "publisherUrl",
+            100.0,
+            "sourceUrl",
+            false
+        )
         val recipes = listOf<Recipe>(recipe)
 
         doAnswer {
@@ -53,7 +63,17 @@ class SearchResultsTests {
 
     @Test
     fun addFavorites_shouldUpdateRecipesStatus() {
-        val recipe = Recipe("id", "title", "imageUrl", "sourceUrl", false)
+        val recipe = Recipe(
+            "id",
+            "title",
+            "imageUrl",
+            "f2fUrl",
+            "publisher",
+            "publisherUrl",
+            100.0,
+            "sourceUrl",
+            false
+        )
         presenter.addFavorites(recipe)
         Assert.assertTrue(recipe.isFavorite)
     }

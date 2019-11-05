@@ -29,6 +29,8 @@ class RecipeAdapter(private var recipes : List<Recipe>, private val listener: Li
         fun bind(item: Recipe, listener: Listener) = with(itemView) {
             Glide.with(context).load(item.imageUrl).into(imageView)
             title.text = item.title
+            publisher.text = item.publisher
+            social_rank.text = item.socialRank.toString()
 
             if (item.isFavorite) {
                 favButton.setImageResource(R.drawable.ic_favorite_black_24dp)

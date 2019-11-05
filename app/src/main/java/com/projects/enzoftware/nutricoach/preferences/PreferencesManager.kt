@@ -11,7 +11,7 @@ class PreferencesManager{
 
     var PRIVATE_MODE = 0
 
-    val PREF_NAME = "eventour-welcome"
+    val PREF_NAME = "nutricoach-welcome"
     val IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch"
 
     constructor(context: Context){

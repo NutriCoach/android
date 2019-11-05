@@ -14,30 +14,55 @@
         android:layout_height="match_parent"
         android:background="?attr/selectableItemBackground"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
             android:contentDescription="@string/recipe_image"
             android:id="@+id/imageView"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
+
             tools:background="#f00"/>
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             tools:text="Recipe title/description"/>
+
+        <TextView
+            android:id="@+id/publisher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            tools:text="Publisher"/>
+
+        <TextView
+            android:id="@+id/social_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:textAlignment="viewStart"
+            tools:text="rank"/>
 
         <ImageView
             android:contentDescription="@string/add_remove_favorite"
             android:id="@+id/favButton"
-            android:layout_width="24dp"
+            android:layout_width="match_parent"
             android:layout_height="24dp"
+            android:textAlignment="viewEnd"
             tools:srcCompat="@drawable/ic_favorite_black_24dp"/>
 
     </LinearLayout>

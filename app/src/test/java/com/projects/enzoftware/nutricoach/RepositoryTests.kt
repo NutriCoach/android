@@ -30,7 +30,17 @@ class RepositoryTests {
         doReturn(emptyList<Recipe>()).whenever(spyRepository).getFavoriteRecipes()
 
         // 2
-        val recipe = Recipe("id", "title", "imageUrl", "sourceUrl", false)
+        val recipe = Recipe(
+            "id",
+            "title",
+            "imageUrl",
+            "f2fUrl",
+            "publisher",
+            "publisherUrl",
+            100.0,
+            "sourceUrl",
+            false
+        )
         spyRepository.addFavorite(recipe)
 
         // 3
